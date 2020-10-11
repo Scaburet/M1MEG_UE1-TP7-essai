@@ -16,3 +16,4 @@ dependencies:
   - nbresuse
   - psutil
   - pip
+  - ipycytoscape
