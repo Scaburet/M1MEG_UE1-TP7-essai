@@ -1,4 +1,4 @@
-name: M1MEG_UE1-TP7-essai 
+name: M1MEG_UE1-TP7-essai
 # channels priority
 # see https://bioconda.github.io/
 # conda-forge has highest prioriy
@@ -7,13 +7,31 @@ channels:
   - bioconda
   - conda-forge
 dependencies:
-  - python>=3.7
-  - numpy
-  - pandas
-  - matplotlib
-  - jupyterlab=3
+# Jupyter dependencies
+  - jupyterhub>=1.5,<2
+  - jupyterlab>=3.2,<4
+  - jupyter-resource-usage
+  - jupyterlab-topbar
+  - jupyterlab-topbar-text
+  - jupyterlab-system-monitor
   - nodejs
   - nbresuse
-  - psutil
+  # Python environment
+  - python>=3.8
   - pip
+  - ipywidgets>=7.6,<8
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - biopython
+  - psutil
+  # Jupyter archive
+  # https://github.com/jupyterlab-contrib/jupyter-archive
+  - jupyter-archive
+  - pip:
+    # Print module version
+    - watermark
+  # Specific package for this usage
   - ipycytoscape
